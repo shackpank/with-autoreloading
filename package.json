@@ -1,0 +1,20 @@
+{
+  "name": "with-autoreloading",
+  "version": "0.0.0",
+  "description": "Require a module in the REPL that attempts to reload itself when it is changed",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "hot",
+    "code",
+    "reloading",
+    "restart"
+  ],
+  "author": "Ollie Buck",
+  "devDependencies": {
+    "mocha": "1.18.2"
+  },
+  "license": "BSD"
+}
