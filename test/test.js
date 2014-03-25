@@ -21,7 +21,7 @@ describe('autoreloading', function() {
       } catch(e) { }
     });
 
-    it('autoreloads', function() {
+    it('autoreloads the function', function() {
       fs.writeFileSync('./testTmp/fn.js', 'module.exports = function() { return "hello world" }');
 
       var fn = require('../')('./testTmp/fn.js');
@@ -44,7 +44,7 @@ describe('autoreloading', function() {
       } catch(e) { }
     });
 
-    it('autoreloads', function() {
+    it('autoreloads all properties of the object', function() {
       fs.writeFileSync('./testTmp/obj.js', 'module.exports = { foo: function() { return "bar"; }, bar: 123 }');
 
       var obj = require('../')('./testTmp/obj.js');
@@ -69,7 +69,7 @@ describe('autoreloading', function() {
       } catch(e) { }
     });
 
-    it('autoreloads', function() {
+    it('autoreloads, including prototypes of existing instances', function() {
       fs.writeFileSync('./testTmp/cs.js', [
         'function MyFunction() { };',
         'MyFunction.prototype.instanceMethod = function() {',
